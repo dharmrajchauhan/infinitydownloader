@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block contents %}
+<div data-scroll-reveal="enter from the bottom after 0.8s" class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Enter name</span>
+    </div>
+    <form method="post" action="/songs">
+    {% csrf_token %}
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="song">
+        <button type="submit" class="btn btn-danger sexy">Download</button>
+    </form>
+    
+</div>
+{% endblock contents %}
